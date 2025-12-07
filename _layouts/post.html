@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+{%   assign reported = page.reported | date: '%s'   %}
+{%   assign disclosed = page.date | date: '%s'   %}
+{%   assign secondsSince = disclosed | minus: reported   %}
+{%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60   %}
+{%   assign daysSince = hoursSince | divided_by: 24   %}
+
+<article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <p class="post-meta">
+        <span>#{{ page.slug }}</span><br/>
+    </p>
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+  </header>
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+</article>

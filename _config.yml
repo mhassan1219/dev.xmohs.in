@@ -1,0 +1,63 @@
+# Site settings
+title_left    : "dev setup"
+title_right   : "" # default: ""
+description   : "xmohs.in"
+keywords      : ""
+url           : https://dev.xmohs.in # site url
+baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
+cover         : "/assets/img/cover.png" # image uri like logo/cover image for site seo
+twitter_username: "shutupmohsin"
+
+
+# Build settings
+permalink   : /:slug
+markdown    : kramdown
+highlighter : rouge
+
+source      : ./
+destination : ./_site
+
+
+# Sass configuration
+sass:
+  sass_dir  : assets/scss
+  style     : compressed # expanded
+
+
+# Author settings
+author:
+  name     : "Mohsin Hassan"
+
+plugins:
+  - jekyll-sitemap
+  - bourbon
+  - jekyll-paginate
+
+
+# navbar pages
+navbar:
+  - slug : about
+    title: About
+  - slug : blog
+    title: Blog
+
+
+exclude:
+  - "gulp"
+  - "node_modules"
+  - "bower"
+  - "bower_components"
+  - "config.rb"
+  - "src"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - ".rvmrc"
+  - ".rbenv-version"
+  - "package.json"
+  - "gulpfile.js"
+  - "README.md"
+  - "Rakefile"
+  - "changelog.md"
+  - "script"
+  - "vendor"
+  - "thinkspace.gemspec"
